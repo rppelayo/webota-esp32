@@ -15,8 +15,8 @@
 
 HTTPClient client;
 // Your WiFi credentials
-const char* ssid = "Your WiFi";
-const char* password = "SSID";
+const char* ssid = "Your WiFi SSID";
+const char* password = "Your WiFi Password";
 // Global variables
 int totalLength;       //total size of firmware
 int currentLength = 0; //current size of written firmware
