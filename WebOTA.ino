@@ -42,7 +42,7 @@ void setup() {
   Serial.print("Response: ");
   Serial.println(resp);
   // If file is reachable, start downloading
-  if(resp > 0){
+  if(resp == 200){
       // get length of document (is -1 when Server sends no Content-Length header)
       totalLength = client.getSize();
       // transfer to local variable
@@ -71,7 +71,7 @@ void setup() {
            delay(1);
       }
   }else{
-    Serial.println("Cannot download firmware file");
+    Serial.println("Cannot download firmware file. Only HTTP response 200: OK is supported. Double check firmware location #defined in HOST.");
   }
   client.end();
   
